@@ -61,3 +61,6 @@ testSuite = hspec $ do
     it "fully reduces nested expressions" $ do
       exec @(Equals ((S :@: K :@: I) :@: (K :@: I :@: S)) I)
 
+main :: IO
+main = testSuite
+
